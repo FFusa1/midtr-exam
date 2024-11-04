@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&display=swap');
+*{
+    font-family: "Big Shoulders Text", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    color: var(black);
+    background: var(white)
+}
+
+img{
+    width: 100%;
+}
+
+section{
+    padding: 4rem 0 2rem;
+}
+
+.container{
+    max-width: 1070px;
+    margin: auto;
+    width: 100%;
+}
