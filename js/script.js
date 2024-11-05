@@ -75,7 +75,7 @@ function renderProducts() {
                     <div class="product-info">
                         <h2 class="product-title">${product.title}</h2>
                         <p class="product-price">$${product.price.toFixed(2)}</p>
-                        <a href="#" class="add-to-cart">Add to cart</a>
+                        <a href="#" class="add-to-cart" data-id="${product.id}">Add to cart</a>
                     </div>
                 </div>
             `
