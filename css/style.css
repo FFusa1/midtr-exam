@@ -52,8 +52,8 @@ header{
     display: none;
 }
 .logo{
-    font-size: 1.6rem;
-    color: black;
+    font-size: 2rem;
+    color: rgb(255, 0, 0);
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -98,6 +98,8 @@ header{
     justify-content: center;
 }
 
+
+/* home background*/
 .home{
     position: relative;
     background-color: white;
@@ -105,28 +107,29 @@ header{
 }
 
 .home img{
-    width: 100%;
+    width: 56%;
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
+    transform: translate(-40%);
     display: flex;
     justify-content: center;
 }
 
 .home-img .img{
-    max-width: 700px;
+    max-width: 300px;
     width: 100%;
+    top: 20%;
 }
 
+
 .home-img::before{
-    content: "coloring style";
-    font-size: 9rem;
+    content: "Different view";
+    font-size: 14rem;
     font-weight: 900;
     text-transform: uppercase;
     position: absolute;
     text-align: center;
     top: -28px;
-    color: blueviolet;
-    z-index: -1;
-}
+    color:rgb(175, 18, 18);
+    top: 16%;
+    left:32%;
+} 
