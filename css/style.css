@@ -11,8 +11,8 @@
 }
 
 body{
-    color: var(black);
-    background: var(white)
+    color: black;
+    background: white;
 }
 
 img{
@@ -48,7 +48,8 @@ header{
     font-size: 28px;
     cursor: pointer;
     display: none;
-    color: var(black);
+    color: black;
+    display: none;
 }
 .logo{
     font-size: 1.6rem;
@@ -77,7 +78,7 @@ header{
 }
 
 #cart-icon[data-quantity="0"]::after{
-    content:"" ;
+    content: "";
 }
 
 #cart-icon[data-quantity]::after{
@@ -87,12 +88,45 @@ header{
     right: -12px;
     width: 20px;
     height: 20px;
-    background-color: var(blue);
+    background-color: #000000;
     border-radius: 50%;
-    color: var(blue);
+    color: rgb(255, 255, 255);
     font-size: 12px;
     font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.home{
+    position: relative;
+    background-color: white;
+    min-height: 700px;
+}
+
+.home img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.home-img .img{
+    max-width: 700px;
+    width: 100%;
+}
+
+.home-img::before{
+    content: "coloring style";
+    font-size: 9rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    position: absolute;
+    text-align: center;
+    top: -28px;
+    color: blueviolet;
+    z-index: -1;
 }
