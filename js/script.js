@@ -82,4 +82,45 @@ function renderProducts() {
         )
         .join(''); 
 }
+
+
+
+// render but inside cart
+
+function renderCartItems(){
+    cartItemsElement.innerHTML = cart
+    .map(
+        (item)=>
+        `
+                    <div class="cart-item">
+                    <img src="${item.Image}" alt="${item.title}">
+                    <div class="cart-item-info">
+                        <h2 class="cart-item-title">${item.title}</h2>
+                        <input 
+                        class="cart-item-quantity" 
+                        type="number" 
+                        name="" 
+                        min="1" 
+                        value="${item.quantity}" 
+                        data-id="${item.id}">
+                    </div>
+                    <h2 class="cart-item-price">${item.price}</h2>
+                    <button><div class="remove-from-cart" data-id="${item.id}">Remove</div></button>
+                </div>
+        `
+    )
+    .join("")
+}
+
+
+
+if(window.location.pathname.includes('cart.html')){
+    renderCartItems();
+}else{
+    renderProducts
+}
+
+
+
     renderProducts();
+    renderCartItems();

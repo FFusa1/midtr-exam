@@ -182,3 +182,39 @@ header{
     margin-top: 0.6rem;
     cursor: pointer;
 }
+
+.cart-container{
+    margin-top: 3rem !important;
+}
+
+.back-homepage{
+    display: flex;
+    align-items: center;
+}
+
+.back-homepage .bx{
+    font-size: 24px;
+    color: black;
+}
+
+.back-homepage span{
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+}
+
+.cart-s-title{
+    font-size: 1.5rem;
+    margin:1.5rem 0;
+}
+
+.cart-box{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    gap: 1rem;
+}
+
+#cartItems{
+    display: grid;
+    row-gap: 1rem;
+}
