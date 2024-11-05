@@ -83,6 +83,35 @@ function renderProducts() {
         .join(''); 
 }
 
+//add to cart from button
+const addToCartButton = document.getElementsByClassName("add-to-cart");
+for (let i = 0; i<addToCartButton.length; i++){
+    const addToCartButton = addToCartButton[i]
+    addToCartButton.addEventListener('click', addToCart)
+}
+// add to cart 
+function addToCart(event){
+    const productID = parseInt(event.target.dataset.id);
+    const product = products.find((product) => productid === productID)
+
+    if(product){
+        const existingItem = cart.find((item) => item.id === productID);
+
+    if(exixtingitem){
+        exixtingItem.quantity++;
+    }else{
+        const cartItem={
+            id: product.id,
+            title: product.title,
+            price: product.price,
+            Image: product.image,
+            quantity:1,
+        };
+        cart.push(cartItem);
+    }
+    renderCartItems();
+    }
+}
 
 
 // render but inside cart
@@ -104,7 +133,7 @@ function renderCartItems(){
                         value="${item.quantity}" 
                         data-id="${item.id}">
                     </div>
-                    <h2 class="cart-item-price">${item.price}</h2>
+                    <h2 class="cart-item-price">$${item.price}</h2>
                     <button><div class="remove-from-cart" data-id="${item.id}">Remove</div></button>
                 </div>
         `

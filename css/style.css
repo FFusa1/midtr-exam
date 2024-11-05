@@ -218,3 +218,45 @@ header{
     display: grid;
     row-gap: 1rem;
 }
+
+.cart-item{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0,5fr 0.5fr;
+    align-items: center;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+}
+
+.cart-item img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cart-item-quantity{
+    border: 1px solid rgb(73, 73, 73);
+    outline-color: black;
+    width: 2.8rem;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 8.5rem;
+}
+
+.cart-item-title{
+    font-size: 1.4rem;
+}
+
+.cart-item-price{
+    font-size: 1.4rem;
+}
+
+.remove-from-cart{
+    max-width: 80px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: black;
+    padding: 8px;
+}
