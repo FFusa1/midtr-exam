@@ -92,19 +92,19 @@ for (let i = 0; i<addToCartButton.length; i++){
 // add to cart 
 function addToCart(event){
     const productID = parseInt(event.target.dataset.id);
-    const product = products.find((product) => productid === productID)
+    const product = products.find((product) => product.id === productID)
 
     if(product){
         const existingItem = cart.find((item) => item.id === productID);
 
-    if(exixtingitem){
-        exixtingItem.quantity++;
+    if(existingitem){
+        existingItem.quantity++;
     }else{
         const cartItem={
             id: product.id,
             title: product.title,
             price: product.price,
-            Image: product.image,
+            Image: product.Image,
             quantity:1,
         };
         cart.push(cartItem);
@@ -146,7 +146,7 @@ function renderCartItems(){
 if(window.location.pathname.includes('cart.html')){
     renderCartItems();
 }else{
-    renderProducts
+    renderProducts();
 }
 
 
