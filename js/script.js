@@ -49,3 +49,37 @@ const products = [
     },
 
 ]
+
+
+
+
+// product list
+
+const productList = document.getElementById('productList')
+const cartItemsElement = document.getElementById('cartItems')
+const cartTotalElement = document.getElementById('cartTotal')
+
+// local storage
+
+let cart=JSON.parse(localStorage.getItem('cart')) || [];
+
+
+// render prodicts
+
+function renderProducts() {
+    productList.innerHTML = products
+        .map(
+            (product) => `
+                <div class="product">
+                    <img src="${product.Image}" alt="${product.title}" class="product-img">
+                    <div class="product-info">
+                        <h2 class="product-title">${product.title}</h2>
+                        <p class="product-price">$${product.price.toFixed(2)}</p>
+                        <a href="#" class="add-to-cart">Add to cart</a>
+                    </div>
+                </div>
+            `
+        )
+        .join(''); 
+}
+    renderProducts();
