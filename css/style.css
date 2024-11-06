@@ -228,8 +228,8 @@ header{
 }
 
 .cart-item img{
-    width: 80px;
-    height: 80px;
+    width: 160px;
+    height: 260px;
     object-fit: cover;
     object-position: center;
 }
@@ -240,7 +240,7 @@ header{
     width: 2.8rem;
     text-align: center;
     border-radius: 4px;
-    margin-top: 8.5rem;
+    margin-top: 1rem;
 }
 
 .cart-item-title{
@@ -248,15 +248,16 @@ header{
 }
 
 .cart-item-price{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 .remove-from-cart{
-    max-width: 80px;
+    max-width: 120px;
     font-weight: 700;
     border: none;
     outline: none;
     background-color: red;
     color: black;
     padding: 8px;
+    font-size: 20px;
 }
