@@ -59,9 +59,8 @@ const productList = document.getElementById('productList')
 const cartItemsElement = document.getElementById('cartItems')
 const cartTotalElement = document.getElementById('cartTotal')
 
-// local storage
 
-let cart=JSON.parse(localStorage.getItem('cart')) || [];
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 
 // render prodicts
@@ -84,9 +83,9 @@ function renderProducts() {
 }
 
 //add to cart from button
-const addToCartButton = document.getElementsByClassName("add-to-cart");
-for (let i = 0; i<addToCartButton.length; i++){
-    const addToCartButton = addToCartButton[i]
+const addToCartButtons = document.getElementsByClassName("add-to-cart");
+for (let i = 0; i<addToCartButtons.length; i++){
+    const addToCartButtons = addToCartButtons[i]
     addToCartButton.addEventListener('click', addToCart)
 }
 // add to cart 
@@ -110,7 +109,13 @@ function addToCart(event){
         cart.push(cartItem);
     }
     renderCartItems();
+    saveToLocalStorage();
     }
+}
+
+
+function saveToLocalStorage() {
+    localStorage.setItem('cart',JSON.stringify(cart))
 }
 
 
