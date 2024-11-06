@@ -215,8 +215,8 @@ header{
 }
 
 #cartItems{
-    display: grid;
-    row-gap: 1rem;
+    display:flex;
+    gap: 1rem;
 }
 
 .cart-item{
@@ -280,4 +280,6 @@ header{
     background-color: rgb(226, 226, 226);
     height: 100px;
     padding: 20px;
+    position: absolute;
+    right: 80%;
 }
