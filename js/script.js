@@ -14,7 +14,7 @@ const productList = document.getElementById('productList');
 const cartItemsElement = document.getElementById('cartItems');
 const cartTotalElement = document.getElementById('cartTotal');
 const cartIcon = document.getElementById('cart-icon');
-
+const sizes = ["S", "M", "L", "XL"]
 
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -127,3 +127,6 @@ if (window.location.pathname.includes('cart.html')) {
 } else {
     renderProducts();
 }
+
+
+
