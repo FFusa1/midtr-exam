@@ -239,12 +239,13 @@ header{
 }
 
 .cart-item-quantity{
-    border: 1px solid rgb(73, 73, 73);
+    border: 2px solid rgb(73, 73, 73);
     outline-color: black;
-    width: 2.8rem;
+    width: 3rem;
     text-align: center;
     border-radius: 4px;
     margin-top: 1rem;
+    font-size: 16px;
 }
 
 .cart-item-title{
