@@ -261,3 +261,23 @@ header{
     padding: 8px;
     font-size: 20px;
 }
+
+.checout-btn{
+    background-color: red;
+    color: black;
+    padding: 4px;
+    border: transparent;
+}
+
+#cartTotal{
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+
+#cart-t{
+    background-color: rgb(226, 226, 226);
+    height: 100px;
+    padding: 20px;
+}
