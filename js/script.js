@@ -9,13 +9,14 @@ const products = [
     { id: 8, title: "Trousers With Double Pleat", price: 129.99, Image: "https://static.zara.net/assets/public/ce5e/60a7/b36e442a9211/4b3b7f3f8804/01255556753-015-p/01255556753-015-p.jpg?ts=1730387012662&w=750" }
 ];
 
+
 const productList = document.getElementById('productList');
 const cartItemsElement = document.getElementById('cartItems');
 const cartTotalElement = document.getElementById('cartTotal');
 const cartIcon = document.getElementById('cart-icon');
 
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 
 function renderProducts() {
@@ -29,7 +30,6 @@ function renderProducts() {
             </div>
         </div>
     `).join('');
-
 
     document.querySelectorAll(".add-to-cart").forEach(button => {
         button.addEventListener('click', addToCart);
@@ -64,29 +64,29 @@ function saveToLocalStorage() {
 
 
 function renderCartItems() {
-    cartItemsElement.innerHTML = cart.map(item => `
-        <div class="cart-item">
-            <img src="${item.Image}" alt="${item.title}">
-            <div class="cart-item-info">
-                <h2 class="cart-item-title">${item.title}</h2>
-                <input class="cart-item-quantity" type="number" min="1" value="${item.quantity}" data-id="${item.id}">
+    if (cartItemsElement && cartTotalElement) {
+        cartItemsElement.innerHTML = cart.map(item => `
+            <div class="cart-item">
+                <img src="${item.Image}" alt="${item.title}">
+                <div class="cart-item-info">
+                    <h2 class="cart-item-title">${item.title}</h2>
+                    <input class="cart-item-quantity" type="number" min="1" value="${item.quantity}" data-id="${item.id}">
+                </div>
+                <h2 class="cart-item-price">$${(item.price * item.quantity).toFixed(2)}</h2>
+                <button class="remove-from-cart" data-id="${item.id}">Remove</button>
             </div>
-            <h2 class="cart-item-price">$${item.price}</h2>
-            <button class="remove-from-cart" data-id="${item.id}">Remove</button>
-        </div>
-    `).join("");
+        `).join("");
 
+        const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+        cartTotalElement.innerHTML = `Total: $${total.toFixed(2)}`;
 
-    const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
-    cartTotalElement.innerHTML = `Total: $${total.toFixed(2)}`;
-
- 
-    document.querySelectorAll('.cart-item-quantity').forEach(input => {
-        input.addEventListener('change', updateQuantity);
-    });
-    document.querySelectorAll('.remove-from-cart').forEach(button => {
-        button.addEventListener('click', removeFromCart);
-    });
+        document.querySelectorAll('.cart-item-quantity').forEach(input => {
+            input.addEventListener('change', updateQuantity);
+        });
+        document.querySelectorAll('.remove-from-cart').forEach(button => {
+            button.addEventListener('click', removeFromCart);
+        });
+    }
 }
 
 
@@ -118,7 +118,7 @@ function removeFromCart(event) {
 
 function updateCartQuantity() {
     const totalQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
-    cartIcon.setAttribute('data-quantity', totalQuantity);
+    if (cartIcon) cartIcon.setAttribute('data-quantity', totalQuantity);
 }
 
 
