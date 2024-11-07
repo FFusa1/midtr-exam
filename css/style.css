@@ -286,7 +286,7 @@ header {
     top: 100px;
 }
 
-/* Responsive Styles */
+/* responsive */
 @media (max-width: 1024px) {
     .product-container {
         grid-template-columns: repeat(3, 1fr);
