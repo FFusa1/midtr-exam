@@ -58,6 +58,7 @@ header {
     color: rgb(255, 0, 0);
     text-transform: uppercase;
     font-weight: 700;
+    padding-right: 300px;
 }
 
 .navbar {
@@ -390,3 +391,48 @@ header {
     }
 
 
+/* Initial style: hide the navbar by sliding it up */
+.navbar {
+    position: absolute;
+    top: 70px; /* Adjusted position for the menu to slide down */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    visibility: hidden; /* Keep it hidden initially */
+}
+
+/* When active, slide down */
+.navbar-active {
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* Change menu icon appearance to 'X' */
+#menu-icon.bx-x {
+    color: red;
+}
+
+/* Desktop view: reset the styles to show the menu normally */
+@media (min-width: 768px) {
+    .navbar {
+        position: static;
+        transform: translateY(0);
+        visibility: visible;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        background-color: transparent;
+    }
+
+    #menu-icon {
+        display: none;
+    }
+}

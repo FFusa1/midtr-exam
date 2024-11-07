@@ -130,3 +130,12 @@ if (window.location.pathname.includes('cart.html')) {
 
 
 
+// menu
+const menuIcon = document.getElementById("menu-icon");
+const navbar = document.querySelector(".navbar");
+
+// Toggle function for showing/hiding navbar
+menuIcon.addEventListener("click", () => {
+  navbar.classList.toggle("navbar-active"); 
+  menuIcon.classList.toggle("bx-x"); //Change icon to X
+});
