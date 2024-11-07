@@ -126,7 +126,7 @@ header {
     position: absolute;
     text-align: center;
     color: rgb(175, 18, 18);
-    top: 16%;
+    top: 1%;
     left: 30%;
 }
 
@@ -365,8 +365,9 @@ header {
     }
 }
     .home-img::before {
-        font-size: 4rem;
-        top: 8%;
+        font-size: 15rem;
+        top: 20%;
+        left: 22%;
     }
     @media (max-width: 430px) {
         .logo {
