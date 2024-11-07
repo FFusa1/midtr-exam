@@ -246,6 +246,7 @@ header {
     height: 40px;
     font-size: 1.4rem;
     display: flex;
+    width: 200px;
 }
 
 .cart-item-price {
