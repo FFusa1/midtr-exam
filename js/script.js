@@ -139,3 +139,8 @@ menuIcon.addEventListener("click", () => {
   navbar.classList.toggle("navbar-active"); 
   menuIcon.classList.toggle("bx-x"); //Change icon to X
 });
+
+
+fetch('https://fakestoreapi.com/products?limit=5')
+            .then(res=>res.json())
+            .then(json=>console.log(json))
