@@ -24,7 +24,7 @@ section {
     padding: 4rem 0 2rem;
 }
 
-.container {
+.headercontainer {
     max-width: 1070px;
     margin: auto;
     width: 100%;
@@ -441,6 +441,7 @@ header {
 /* slider  */
 .container {
     max-width: 1200px;
+    margin-top: 100px;
     width: 95%;
   }
   .slider-wrapper {
