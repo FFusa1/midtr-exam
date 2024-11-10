@@ -211,3 +211,4 @@ const initSlider = () => {
 
 window.addEventListener("resize", initSlider);
 window.addEventListener("load", initSlider);
+
