@@ -141,11 +141,6 @@ menuIcon.addEventListener("click", () => {
 });
 
 
-fetch('https://fakestoreapi.com/products?limit=5')
-            .then(res=>res.json())
-            .then(json=>console.log(json))
-
-
 
             // slider
 
@@ -195,20 +190,20 @@ fetch('https://fakestoreapi.com/products?limit=5')
                     });
                 });
             
-                 // Show or hide slide buttons based on scroll position
+                 // show or hide slide buttons based on scroll position
                 const handleSlideButtons = () => {
                     slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
                     slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
                 }
             
-                // Update scrollbar thumb position based on image scroll
+                // update scrollbar thumb position based on image scroll
                 const updateScrollThumbPosition = () => {
                     const scrollPosition = imageList.scrollLeft;
                     const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
                     scrollbarThumb.style.left = `${thumbPosition}px`;
                 }
             
-                // Call these two functions when image list scrolls
+                // call these two functions when image list scrolls
                 imageList.addEventListener("scroll", () => {
                     updateScrollThumbPosition();
                     handleSlideButtons();
