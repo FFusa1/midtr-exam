@@ -1,10 +1,10 @@
 
 // List of products with ID, title, price, and image URL
 const products = [
-    { id: 1, title: "Leather Coat", price: 149.99, Image: "https://static.zara.net/assets/public/fded/e3b5/8afa45f9b357/533e37622b3c/04341728814-015-p/04341728814-015-p.jpg?ts=1726156162824&w=750" },
-    { id: 4, title: "Sequinner Dress", price: 164.99, Image: "https://static.zara.net/assets/public/de5a/f2e5/99734230b944/6b5ec2e1a543/05536131401-a1/05536131401-a1.jpg?ts=1730633679450&w=750" },
-    { id: 5, title: "Mini Dress", price: 124.99, Image: "https://static.zara.net/assets/public/b9ba/58fc/d8974ce49e82/f9770616f86f/09598230401-p/09598230401-p.jpg?ts=1730643515042&w=750" },
-    { id: 8, title: "Trousers With Double Pleat", price: 129.99, Image: "https://static.zara.net/assets/public/ce5e/60a7/b36e442a9211/4b3b7f3f8804/01255556753-015-p/01255556753-015-p.jpg?ts=1730387012662&w=750" }
+    { id: 1, title: "Leather Coat", price: 149.99,Link:"/productpage_html/product1.html", Image: "https://static.zara.net/assets/public/fded/e3b5/8afa45f9b357/533e37622b3c/04341728814-015-p/04341728814-015-p.jpg?ts=1726156162824&w=750" },
+    { id: 4, title: "Sequinner Dress", price: 164.99,Link:"/productpage_html/product2.html", Image: "https://static.zara.net/assets/public/de5a/f2e5/99734230b944/6b5ec2e1a543/05536131401-a1/05536131401-a1.jpg?ts=1730633679450&w=750" },
+    { id: 5, title: "Mini Dress", price: 124.99,Link:"/productpage_html/product3.html", Image: "https://static.zara.net/assets/public/b9ba/58fc/d8974ce49e82/f9770616f86f/09598230401-p/09598230401-p.jpg?ts=1730643515042&w=750" },
+    { id: 8, title: "Trousers With Double Pleat",Link:"/productpage_html/product4.html", price: 129.99, Image: "https://static.zara.net/assets/public/ce5e/60a7/b36e442a9211/4b3b7f3f8804/01255556753-015-p/01255556753-015-p.jpg?ts=1730387012662&w=750" }
 ];
 
 // Elements in HTML where products, cart items, and cart total are displayed
@@ -22,7 +22,7 @@ function renderProducts() {
      // Display each product with title, price, image, and "Add to cart" button
     productList.innerHTML = products.map(product => `
         <div class="product">
-            <img src="${product.Image}" alt="${product.title}" class="product-img">
+            <a href="${product.Link}"><img src="${product.Image}" alt="${product.title}" class="product-img"></a>
             <div class="product-info">
                 <h2 class="product-title">${product.title}</h2>
                 <p class="product-price">$${product.price.toFixed(2)}</p>
