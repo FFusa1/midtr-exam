@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Product Details | eWear</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/productpage.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- Header -->
@@ -21,7 +24,7 @@
                 <a href="#" class="nav-link">All products</a>
             </div>
             <a href="/cart.html">
-                <i class='bx bx-shopping-bag' id="cart-icon"></i>
+                <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
             </a>
         </div>
     </header>
@@ -29,14 +32,16 @@
     <!-- Product Detail Section -->
     <section class="product-details container">
         <div class="product-info">
-            <!-- Product Image -->
+            <!-- Product Image (Left) -->
             <div class="product-image">
-                <img src="https://static.zara.net/assets/public/ce5e/60a7/b36e442a9211/4b3b7f3f8804/01255556753-015-p/01255556753-015-p.jpg?ts=1730387012662&w=750" alt="Trousers With Double Pleat">
+                <img src="https://static.zara.net/assets/public/b9ba/58fc/d8974ce49e82/f9770616f86f/09598230401-p/09598230401-p.jpg?ts=1730643515042&w=750"
+                    alt="Sequinned Dress in red color">
             </div>
-            <!-- Product Details (Price and Checkout) -->
+
+            <!-- Product Information (Right) -->
             <div class="product-detail">
                 <h1 class="product-title">Trousers With Double Pleat</h1>
-                <p class="product-description">A stylish Trousers With Double Pleat.</p>
+                <p class="product-description">A stylish Trousers.</p>
                 <p class="product-price">$129.99</p>
                 <div class="product-actions">
                     <button class="add-to-cart" id="add-to-cart">Add to Cart</button>
@@ -44,23 +49,17 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 eWear. All rights reserved.</p>
-    </footer>
-
-    <script src="/js/script.js"></script>
     <script>
         const addToCartButton = document.getElementById("add-to-cart");
 
         // Product data
         const product = {
             id: 8, 
-            title: "Trousers With Double Pleat", 
+            title: "Trousers With Double Pleat",
+            Link:"/productpage_html/product4.html", 
             price: 129.99, 
             Image: "https://static.zara.net/assets/public/ce5e/60a7/b36e442a9211/4b3b7f3f8804/01255556753-015-p/01255556753-015-p.jpg?ts=1730387012662&w=750" 
-        }
+        };
 
         // Add to Cart Functionality
         addToCartButton.addEventListener("click", () => {
@@ -74,7 +73,7 @@
             localStorage.setItem("cart", JSON.stringify(cart));
             alert("Product added to cart!");
         });
-
     </script>
 </body>
+
 </html>
