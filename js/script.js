@@ -40,7 +40,10 @@ function renderProducts() {
     });
 }
 
-// Function to add product to cart
+
+
+
+//Add product to cart
 function addToCart(event) {
     event.preventDefault();
     const productID = parseInt(event.target.dataset.id);
@@ -60,6 +63,9 @@ function addToCart(event) {
         saveToLocalStorage();
     }
 }
+
+
+
 
 // Function to save cart to localStorage
 function saveToLocalStorage() {
@@ -93,8 +99,8 @@ function renderCartItems() {
         });
     }
 }
-// Function to update quantity of an item in cart
 
+// Function to update quantity of an item in cart
 function updateQuantity(event) {
     const itemID = parseInt(event.target.dataset.id);
     const newQuantity = parseInt(event.target.value);
