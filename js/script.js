@@ -48,7 +48,7 @@ function addToCart(event) {
 
     if (product) {
         const existingItem = cart.find(item => item.id === productID);
-// Increase quantity if item is already in cart, otherwise add it
+// Increase quantity if item is already in cart, add it again
         if (existingItem) {
             existingItem.quantity++;
         } else {
