@@ -43,6 +43,7 @@ function renderProducts() {
 
 
 
+
 //Add product to cart
 function addToCart(event) {
     event.preventDefault();
