@@ -1,97 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eWear - Women's Collection</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
-</head>
-<body>
-
-    <!-- Header Section -->
-    <header>
-        <div class="nav container">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>eWear - Women's Collection</title>
+      <link rel="stylesheet" href="/css/style.css">
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+   </head>
+   <body>
+      <!-- Header Section -->
+      <header>
+         <div class="nav container">
             <i class='bx bx-menu' id="menu-icon"></i>
             <a href="/index.html" class="logo">eWear</a>
             <div class="navbar">
-                <a href="/navbar_html/women.html" class="nav-link">Women</a>
-                <a href="/navbar_html/men.html" class="nav-link">Men</a>
-                <a href="/navbar_html/allproducts.html" class="nav-link">All products</a>
+               <a href="/navbar_html/women.html" class="nav-link">Women</a>
+               <a href="/navbar_html/men.html" class="nav-link">Men</a>
+               <a href="/navbar_html/allproducts.html" class="nav-link">All products</a>
             </div>
             <a href="/cart.html">
-                <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
+            <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
             </a>
-        </div>
-    </header>
-
-    <!-- Products for Sale Section -->
-    <section class="products container" id="products">
-
-        <!-- Product Container Section -->
-        <div class="product-container" id="productList">
+         </div>
+      </header>
+      <!-- Products for Sale Section -->
+      <section class="products container" id="products">
+         <!-- Product Container Section -->
+         <div class="product-container" id="productList">
             <!-- Products will be dynamically inserted here by JavaScript -->
-        </div>
-    </section>
-
-    <script src="/js//women.js"></script>
-
-    <script>
-        // Sample products array for women with links to product detail pages
-        const products = [
-            {
-                id: 1, 
-                title: "Leather Coat", 
-                price: 149.99, 
-                Image: "https://static.zara.net/assets/public/fded/e3b5/8afa45f9b357/533e37622b3c/04341728814-015-p/04341728814-015-p.jpg?ts=1726156162824&w=750"
-            },
-            {
-                id: 4, 
-                title: "Sequinner Dress", 
-                price: 164.99, 
-                Image: "https://static.zara.net/assets/public/de5a/f2e5/99734230b944/6b5ec2e1a543/05536131401-a1/05536131401-a1.jpg?ts=1730633679450&w=750" 
-            },
-            {
-                id: 5, 
-                title: "Mini Dress", 
-                price: 124.99, 
-                Image: "https://static.zara.net/assets/public/b9ba/58fc/d8974ce49e82/f9770616f86f/09598230401-p/09598230401-p.jpg?ts=1730643515042&w=750" 
-            },
-            {
-                id: 8, 
-                title: "Trousers With Double Pleat", 
-                price: 129.99, 
-                Image: "https://static.zara.net/assets/public/ce5e/60a7/b36e442a9211/4b3b7f3f8804/01255556753-015-p/01255556753-015-p.jpg?ts=1730387012662&w=750"
-            }
-        ];
-
-        // Function to display products on the page
-        function displayProducts() {
-            const productList = document.getElementById('productList');
-            productList.innerHTML = ''; // Clear previous content if any
-
-            products.forEach(product => {
-                const productCard = document.createElement('div');
-                productCard.classList.add('product-card');
-                
-                productCard.innerHTML = `
-                    <a href="${product.url}">  <!-- Link wrapping the image -->
-                        <img src="${product.image}" alt="${product.name}" class="product-image">
-                    </a>
-                    <div class="product-details">
-                        <h3 class="product-name">${product.name}</h3>
-                        <p class="product-price">$${product.price.toFixed(2)}</p>
-                        <a href="${product.url}" class="btn">View Product</a>  <!-- View Product link -->
-                    </div>
-                `;
-                
-                productList.appendChild(productCard);
-            });
-        }
-
-        // Call the function to display the products when the page loads
-        displayProducts();
-    </script>
-</body>
+         </div>
+      </section>
+      <script src="/js//women.js"></script>
+      <script>
+         // Sample products array for women with links to product detail pages
+         const products = [
+             {
+                 id: 1, 
+                 title: "Leather Coat", 
+                 price: 149.99, 
+                 Image: "https://static.zara.net/assets/public/fded/e3b5/8afa45f9b357/533e37622b3c/04341728814-015-p/04341728814-015-p.jpg?ts=1726156162824&w=750"
+             },
+             {
+                 id: 4, 
+                 title: "Sequinner Dress", 
+                 price: 164.99, 
+                 Image: "https://static.zara.net/assets/public/de5a/f2e5/99734230b944/6b5ec2e1a543/05536131401-a1/05536131401-a1.jpg?ts=1730633679450&w=750" 
+             },
+             {
+                 id: 5, 
+                 title: "Mini Dress", 
+                 price: 124.99, 
+                 Image: "https://static.zara.net/assets/public/b9ba/58fc/d8974ce49e82/f9770616f86f/09598230401-p/09598230401-p.jpg?ts=1730643515042&w=750" 
+             },
+             {
+                 id: 8, 
+                 title: "Trousers With Double Pleat", 
+                 price: 129.99, 
+                 Image: "https://static.zara.net/assets/public/ce5e/60a7/b36e442a9211/4b3b7f3f8804/01255556753-015-p/01255556753-015-p.jpg?ts=1730387012662&w=750"
+             }
+         ];
+         
+         // Function to display products on the page
+         function displayProducts() {
+             const productList = document.getElementById('productList');
+             productList.innerHTML = ''; // Clear previous content if any
+         
+             products.forEach(product => {
+                 const productCard = document.createElement('div');
+                 productCard.classList.add('product-card');
+                 
+                 productCard.innerHTML = `
+                     <a href="${product.url}">  <!-- Link wrapping the image -->
+                         <img src="${product.image}" alt="${product.name}" class="product-image">
+                     </a>
+                     <div class="product-details">
+                         <h3 class="product-name">${product.name}</h3>
+                         <p class="product-price">$${product.price.toFixed(2)}</p>
+                         <a href="${product.url}" class="btn">View Product</a>  <!-- View Product link -->
+                     </div>
+                 `;
+                 
+                 productList.appendChild(productCard);
+             });
+         }
+         
+         // Call the function to display the products when the page loads
+         displayProducts();
+      </script>
+   </body>
 </html>
