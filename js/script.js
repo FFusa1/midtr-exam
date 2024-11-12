@@ -1,5 +1,14 @@
 
 // List of products with ID, title, price, and image URL
+window.addEventListener('load', function () {
+    alert("It's loaded!")
+  })
+document.addEventListener("DOMContentLoaded", function(event){
+
+
+
+
+
 const products = [
     { id: 1, title: "Leather Coat", price: 149.99, Image: "https://static.zara.net/assets/public/fded/e3b5/8afa45f9b357/533e37622b3c/04341728814-015-p/04341728814-015-p.jpg?ts=1726156162824&w=750" },
     { id: 2, title: "Padded overshirt", price: 124.99, Image: "https://static.zara.net/assets/public/64b0/07fd/6f244d6b8f29/438cd7167418/01063383500-p/01063383500-p.jpg?ts=1730634458999&w=750" },
@@ -227,3 +236,9 @@ const initSlider = () => {
 window.addEventListener("resize", initSlider);
 window.addEventListener("load", initSlider);
 
+
+
+
+
+
+});
