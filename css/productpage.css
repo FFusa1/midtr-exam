@@ -1,186 +1,191 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&display=swap');
 
 * {
-    font-family: "Big Shoulders Text", sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    scroll-padding-top: 2rem;
-    text-decoration: none;
-    list-style: none;
+	font-family: "Big Shoulders Text", sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	scroll-padding-top: 2rem;
+	text-decoration: none;
+	list-style: none;
 }
 
 body {
-    color: black;
-    background: white;
+	color: black;
+	background: white;
 }
 
 img {
-    width: 100%;
+	width: 100%;
 }
 
 section {
-    padding: 4rem 0 2rem;
+	padding: 4rem 0 2rem;
 }
 
 .container {
-    max-width: 1070px;
-    margin: auto;
-    width: 100%;
+	max-width: 1070px;
+	margin: auto;
+	width: 100%;
 }
 
 /* Header */
 header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    background-color: rgba(255, 255, 255, 0.733);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background-color: rgba(255, 255, 255, 0.733);
 }
 
 .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 25px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 25px 0;
 }
 
 #menu-icon {
-    font-size: 28px;
-    cursor: pointer;
-    color: black;
-    display: none;
+	font-size: 28px;
+	cursor: pointer;
+	color: black;
+	display: none;
 }
 
 .logo {
-    font-size: 2rem;
-    color: rgb(255, 0, 0);
-    text-transform: uppercase;
-    font-weight: 700;
-    padding-right: 300px;
+	font-size: 2rem;
+	color: rgb(255, 0, 0);
+	text-transform: uppercase;
+	font-weight: 700;
+	padding-right: 300px;
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    column-gap: 2rem;
+	display: flex;
+	align-items: center;
+	column-gap: 2rem;
 }
 
 .nav-link {
-    font-size: 1.5rem;
-    color: black;
-    font-weight: 700;
+	font-size: 1.5rem;
+	color: black;
+	font-weight: 700;
 }
 
 #cart-icon {
-    position: relative;
-    font-size: 1.8rem;
-    color: black;
-    cursor: pointer;
+	position: relative;
+	font-size: 1.8rem;
+	color: black;
+	cursor: pointer;
 }
 
 #cart-icon[data-quantity="0"]::after {
-    content: "";
+	content: "";
 }
 
 #cart-icon[data-quantity]::after {
-    content: attr(data-quantity);
-    position: absolute;
-    top: 0;
-    right: -12px;
-    width: 20px;
-    height: 20px;
-    background-color: #000000;
-    border-radius: 50%;
-    color: rgb(255, 255, 255);
-    font-size: 12px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	content: attr(data-quantity);
+	position: absolute;
+	top: 0;
+	right: -12px;
+	width: 20px;
+	height: 20px;
+	background-color: #000000;
+	border-radius: 50%;
+	color: rgb(255, 255, 255);
+	font-size: 12px;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 /* Product Detail Section */
 .product-details {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 3rem; /* Adds space between the image and text */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 3rem;
+	/* Adds space between the image and text */
 }
 
 .product-info {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
+	display: flex;
+	align-items: center;
+	gap: 3rem;
 }
 
 .product-image {
-    flex: 1; /* Allow the image to take up equal space */
-    max-width: 500px; /* Set a max width for the image */
+	flex: 1;
+	/* Allow the image to take up equal space */
+	max-width: 500px;
+	/* Set a max width for the image */
 }
 
 .product-detail {
-    flex: 1; /* Allow the text to take up equal space */
-    max-width: 500px; /* Set a max width for the text container */
+	flex: 1;
+	/* Allow the text to take up equal space */
+	max-width: 500px;
+	/* Set a max width for the text container */
 }
 
 .product-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: black;
+	font-size: 2rem;
+	font-weight: 700;
+	color: black;
 }
 
 .product-description {
-    font-size: 1.2rem;
-    color: #555;
-    margin: 1rem 0;
+	font-size: 1.2rem;
+	color: #555;
+	margin: 1rem 0;
 }
 
 .product-price {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: black;
-    margin-top: 0.5rem;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: black;
+	margin-top: 0.5rem;
 }
 
 .product-actions {
-    margin-top: 1rem;
+	margin-top: 1rem;
 }
 
 .add-to-cart {
-    background-color: rgb(255, 0, 0);
-    color: white;
-    font-weight: 600;
-    letter-spacing: 1px;
-    padding: 10px 20px;
-    cursor: pointer;
+	background-color: rgb(255, 0, 0);
+	color: white;
+	font-weight: 600;
+	letter-spacing: 1px;
+	padding: 10px 20px;
+	cursor: pointer;
 }
 
 /* Footer */
 footer {
-    padding: 2rem;
-    text-align: center;
-    background-color: #f1f1f1;
+	padding: 2rem;
+	text-align: center;
+	background-color: #f1f1f1;
 }
 
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
-    .product-details {
-        flex-direction: column;
-        gap: 2rem;
-    }
+	.product-details {
+		flex-direction: column;
+		gap: 2rem;
+	}
 
-    .product-info {
-        flex-direction: column;
-    }
+	.product-info {
+		flex-direction: column;
+	}
 
-    .product-image {
-        max-width: 100%;
-    }
+	.product-image {
+		max-width: 100%;
+	}
 
-    .product-detail {
-        max-width: 100%;
-    }
+	.product-detail {
+		max-width: 100%;
+	}
 }
