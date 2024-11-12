@@ -18,6 +18,8 @@ const products = [
     { id: 7, title: "Valvet Overshirt", price: 114.99, Image: "https://static.zara.net/assets/public/68a7/b6bd/7237419daf1e/feeb10739e26/05320422800-p/05320422800-p.jpg?ts=1730642380735&w=750" },
     { id: 8, title: "Trousers With Double Pleat", price: 129.99, Image: "https://static.zara.net/assets/public/ce5e/60a7/b36e442a9211/4b3b7f3f8804/01255556753-015-p/01255556753-015-p.jpg?ts=1730387012662&w=750" }
 ];
+window.addEventListener('load', function() {
+    console.log("Page is fully loaded.");
 
 // Elements in HTML where products, cart items, and cart total are displayed
 const productList = document.getElementById('productList');
@@ -151,7 +153,7 @@ if (window.location.pathname.includes('cart.html')) {
     renderProducts();
 }
 
-
+});
 
 // Navbar and menu icon toggle functionality
 const menuIcon = document.getElementById("menu-icon");
