@@ -137,15 +137,3 @@ if (window.location.pathname.includes('cart.html')) {
 } else {
     renderProducts();
 }
-
-
-
-// Navbar and menu icon toggle functionality
-const menuIcon = document.getElementById("menu-icon");
-const navbar = document.querySelector(".navbar");
-
-// Toggle navbar and icon style on menu icon click
-menuIcon.addEventListener("click", () => {
-  navbar.classList.toggle("navbar-active"); 
-  menuIcon.classList.toggle("bx-x"); //Change icon to X
-});
