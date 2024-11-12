@@ -1,9 +1,8 @@
 
 // List of products with ID, title, price, and image URL
-window.addEventListener('load', function () {
-    alert("It's loaded!")
-  })
-document.addEventListener("DOMContentLoaded", function(event){
+window.addEventListener('load', function() {
+    console.log("Page is fully loaded.");
+});
 
 
 
@@ -239,6 +238,3 @@ window.addEventListener("load", initSlider);
 
 
 
-
-
-});
