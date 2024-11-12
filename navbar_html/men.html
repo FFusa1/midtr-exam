@@ -34,7 +34,7 @@
             <!-- Products will be dynamically inserted here by JavaScript -->
         </div>
     </section>
-    <script src="/js/allproducts.js"></script>
+    <script src="/js/men.js"></script>
 
     <script>
         // Sample products array for women with links to product detail pages
@@ -68,7 +68,7 @@
         // Function to display products on the page
         function displayProducts() {
             const productList = document.getElementById('productList');
-            productList.innerHTML = ''; // Clear previous content if any
+            productList.innerHTML = ''; // Clear previous content
 
             products.forEach(product => {
                 const productCard = document.createElement('div');
