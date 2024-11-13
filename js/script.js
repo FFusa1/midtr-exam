@@ -131,6 +131,7 @@ if (cartItemsElement && cartTotalElement) {
     // Calculate and display total price for cart items
     const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
     cartTotalElement.innerHTML = `Total: $${total.toFixed(2)}`;
+
     // Event listeners for quantity change and remove buttons
     document.querySelectorAll('.cart-item-quantity').forEach(input => {
         input.addEventListener('change', updateQuantity);
@@ -155,7 +156,7 @@ if (item && newQuantity > 0) {
     removeFromCart(event);
 }
 
-// Re-render cart, update quantity badge, and save to localStorage
+// Re-render cart, update quantity Icon, and save to localStorage
 renderCartItems();
 updateCartQuantity();
 saveToLocalStorage();
